@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Navbar extends Component {
   render() {
@@ -31,12 +32,42 @@ export default class Navbar extends Component {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/about">
-                    About
+                  <a className="nav-link" href="/business">
+                    Business
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/entertainment">
+                    Entertainment
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/general">
+                    General
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/health">
+                    Health
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/science">
+                    Science
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/sports">
+                    Sports
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/technology">
+                    Technology
                   </a>
                 </li>
                 {/* <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle"
                     href="#"
                     role="button"
@@ -44,32 +75,32 @@ export default class Navbar extends Component {
                     aria-expanded="false"
                   >
                     Dropdown
-                  </a>
+                  </Link>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" href="#">
                         Action
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" href="#">
                         Another action
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" href="#">
                         Something else here
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li> */}
                 {/* <li className="nav-item">
-                  <a className="nav-link disabled" aria-disabled="true">
+                  <Link className="nav-link disabled" aria-disabled="true">
                     Disabled
-                  </a>
+                  </Link>
                 </li> */}
               </ul>
               {/* <form className="d-flex" role="search">
