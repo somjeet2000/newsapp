@@ -2,10 +2,29 @@ import React, { Component } from 'react';
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, urlToImage, url } = this.props;
+    let {
+      title,
+      description,
+      urlToImage,
+      url,
+      sourceName,
+      author,
+      publishedAt,
+    } = this.props;
     return (
       <div className="my-3">
-        <div className="card" style={{ width: '18rem', height: '23rem' }}>
+        <div className="card" style={{ width: '18rem', height: '27rem' }}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              position: 'absolute',
+              right: '0',
+              transform: 'translate(-0%, -50%)',
+            }}
+          >
+            <span className="badge rounded-pill bg-danger">{sourceName}</span>
+          </div>
           <img
             src={
               urlToImage
@@ -14,11 +33,17 @@ export default class NewsItem extends Component {
             }
             className="card-img-top"
             alt="..."
-            style={{ height: '10rem' }}
+            style={{ height: '9.5rem' }}
           />
           <div className="card-body">
             <h5 className="card-title">{title}...</h5>
             <p className="card-text">{description}...</p>
+            <p className="card-text">
+              <small className="text-body-secondary">
+                By {author ? author : 'Undefined'} On{' '}
+                {new Date(publishedAt).toUTCString()}
+              </small>
+            </p>
             <a
               href={url}
               rel="noreferrer"
