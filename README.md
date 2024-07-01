@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+## NEWSMONKEY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NewsMonkey is an application which is used to get the daily dose of news for free in different categories like Health, Sports, Science, Technologies, Entertainment etc.
 
-## Available Scripts
+### How to Install
 
-In the project directory, you can run:
+Get the code from the GitHub into the local, and Write
 
-### `npm start`
+### `npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This will install all the necessary packages, that is required to run the NewsMonkey Application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+After the installation, we need to get an API key to run the application. This application actually fetch the API provided by the [newsapi](https://newsapi.org) and renders it into the display.
 
-### `npm test`
+To get the API key, you need to register to this account. After the registration they will provide you the API key. Once the API key has been generated create one new file ".env.local".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Why we create this file?
+This file is actually stores your API key, if you want to publish this website into GitHub, you API key should not be visible to others, Hence we can store our API key into this file and export the API key into our App.js. Please conside the name should be same as provided in the App.js.
 
-### `npm run build`
+### `For eg - REACT_APP_NEWS_API="{API KEY PROVIDED BY THE NEWSAPI.ORG}"`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### How to Run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After adding the API key into the component, you can run the application using NPM.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run start`
 
-### `npm run eject`
+It will run the application into your local [system](http://localhost:3000/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Limitations
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This API will only work on the localhost machine. We have some limitations mentioned by the newsapi.org. If you use the developer version which is free of cost, it will only provide you the data if the application is running on localhost URL. If any other URL, it will not send the API data and the App will not work.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run the API on other URLs as well, then you've to buy their subscriptions.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Recommendation
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Use the API in localhost machine only. Don't deploy this application. It will not work. In future, if we receive any similar API like newsapi, which allows to deploy the application, we can use.
