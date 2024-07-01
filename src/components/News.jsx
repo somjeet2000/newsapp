@@ -40,7 +40,9 @@ export default class News extends Component {
     this.props.setProgress(10);
     let apiURL = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     // this.setState({ loading: true });
+    this.props.setProgress(40);
     let fetchData = await fetch(apiURL);
+    this.props.setProgress(70);
     let parsedData = await fetchData.json();
     this.setState({
       articles: parsedData.articles,
@@ -106,7 +108,7 @@ export default class News extends Component {
   render() {
     return (
       <>
-        <h2 className="text-center my-3">
+        <h2 className="text-center" style={{ marginTop: '5rem' }}>
           NewsMonkey - Top {this.capitalizeFirstLetter(this.props.category)}{' '}
           Headlines
         </h2>
